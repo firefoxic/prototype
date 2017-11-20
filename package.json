@@ -1,0 +1,84 @@
+{
+  "name": "qt-fb-old",
+  "version": "1.0.0",
+  "description": "qualification test from Fan-Box.ru",
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Opera versions",
+    "last 2 Safari versions",
+    "last 1 Edge versions",
+    "ie 11"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-airbnb": "^2.4.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "css-mqpacker": "^6.0.2",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-image": "^4.3.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-remember": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0",
+    "path": "^0.12.7",
+    "postcss-advanced-variables": "^2.3.3",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-csso": "^3.0.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-load-config": "^1.2.0",
+    "postcss-nesting": "^5.0.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-url": "^7.3.2",
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "start": "gulp --debug",
+    "build": "gulp build",
+    "deploy": "gulp deploy",
+    "zip": "NODE_ENV=production gulp build && gulp zip",
+    "lint:scripts": "./node_modules/.bin/eslint source/scripts/**/*.js",
+    "lint:styles": "./node_modules/.bin/stylelint source/styles/**/*.css",
+    "lint": "npm run lint:styles && npm run lint:scripts",
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firefoxic/qt-fb-old.git"
+  },
+  "keywords": [
+    "quality",
+    "test",
+    "frontend",
+    "layout"
+  ],
+  "author": "firefoxic",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/firefoxic/qt-fb-old/issues"
+  },
+  "homepage": "https://github.com/firefoxic/qt-fb-old#readme"
+}
