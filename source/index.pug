@@ -1,0 +1,11 @@
+extends blocks/root/root.pug
+include blocks/page/page.pug
+
+block variables
+  - var pageTitle = 'Нямушка — корм для кошек'
+
+block page
+  +page()
+    h1 #{pageTitle}
+    p
+      b= 'Ты сегодня покормил кота?'
