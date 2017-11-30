@@ -16,6 +16,12 @@
     local("TrebuchetMS");
 }
 
+@custom-media --phone-only (max-width: 599px);
+@custom-media --tablet-only (min-width: 600px) and (max-width: 1199px);
+@custom-media --tablet-up (min-width: 600px);
+@custom-media --desktop-up (min-width: 1200px);
+@custom-media --retina (min-resolution: 1.5dppx), (min-resolution: 144dpi);
+
 $text-color-main: hsl(0, 0%, 0%);
 $text-color-invert: hsl(0, 0%, 100%);
 $text-color-disabled: hsl(0, 0%, 70%);
