@@ -1,3 +1,21 @@
+@font-face {
+  font-family: Exo2;
+  font-style: normal;
+  font-weight: 100;
+  src:
+    url(../../assets/fonts/Exo2.0-Thin.woff2),
+    url(../../assets/fonts/Exo2.0-Thin.woff);
+}
+
+@font-face {
+  font-family: Trebuchet MS;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Trebuchet MS"),
+    local("TrebuchetMS");
+}
+
 :root {
   font-size: 20px;
   font-family: Trebuchet MS, Arial, sans-serif;
