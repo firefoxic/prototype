@@ -65,7 +65,7 @@ mixin products(food)
         )
 
 block page
-  +page()
+  +page()(class='page__layout')
     form.form(action='/', method='post')
       +heading()(class='hidden').
         #{pageTitle}

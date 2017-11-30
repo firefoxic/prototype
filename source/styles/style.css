@@ -1,4 +1,5 @@
 @import "../blocks/root/root.post.css";
 @import "../blocks/page/page.post.css";
+@import "../blocks/page/__layout/page__layout.post.css";
 @import "../blocks/hidden/hidden.post.css";
 @import "../blocks/products/products.post.css";
