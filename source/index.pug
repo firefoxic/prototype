@@ -67,7 +67,7 @@ mixin products(food)
 block page
   +page()(class='page__layout')
     form.form(action='/', method='post')
-      +heading()(class='hidden').
+      +heading('h1')(class='hidden').
         #{pageTitle}
       +tagline().
         Ты сегодня покормил кота?
