@@ -1,11 +1,76 @@
 extends blocks/root/root.pug
 include blocks/page/page.pug
+include blocks/heading/heading.pug
+include blocks/heading/__tagline/heading__tagline.pug
 
 block variables
-  - var pageTitle = 'Нямушка — корм для кошек'
+  - var pageTitle = 'Корм для котов'
+  -
+    var foodList = [
+      {
+        type: 'foiegras',
+        ingredient: 'с фуа-гра',
+        doseCount: '10',
+        mouseCount: 1,
+        packWeight: '0,5',
+        description: 'Печень утки разварная с артишоками.'
+      },
+      {
+        type: 'fish',
+        ingredient: 'с рыбой',
+        doseCount: '40',
+        mouseCount: 2,
+        packWeight: '2',
+        description: 'Головы щучьи с чесноком да свежайшая сёмгушка.'
+      },{
+        type: 'chicken',
+        ingredient: 'с курой',
+        doseCount: '100',
+        mouseCount: 5,
+        packWeight: '5',
+        description: 'Филе из цыплят с трюфелями в бульоне.'
+      }
+    ];
+
+mixin products(food)
+  fieldset
+    legend= food.description
+    label(for=food.type)
+      article
+        h2.heading= 'Нямушка '
+          span= food.ingredient
+        p= 'Сказочное заморское яство'
+        p= food.doseCount + ' порций'
+        case food.mouseCount
+          when 1
+            p= 'мышь в подарок'
+          when 2
+            p= '2 мыши в подарок'
+          when 5
+            p= '5 мышей в подарок'
+              br
+              .
+                заказчик доволен
+        p
+          span= 'Вес упаковки — '
+          span= food.packWeight
+          span= 'кг'
+    p= 'Чего сидишь? Порадуй котэ, '
+      label= 'купи.'
+        input.hidden(
+          type='checkbox'
+          name='type'
+          value=food.type
+          id=food.type
+        )
 
 block page
   +page()
-    h1 #{pageTitle}
-    p
-      b= 'Ты сегодня покормил кота?'
+    form.form(action='/', method='post')
+      +heading()(class='hidden').
+        #{pageTitle}
+      +tagline().
+        Ты сегодня покормил кота?
+      for food in foodList
+        +products(food)
+      button.button.hidden(type='submit')= 'Оформить заказ'
