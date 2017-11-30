@@ -3,6 +3,7 @@ include blocks/page/page.pug
 include blocks/heading/heading.pug
 include blocks/heading/__tagline/heading__tagline.pug
 include blocks/form/form.pug
+include blocks/products/products.pug
 
 block variables
   - var pageTitle = 'Корм для котов'
@@ -32,38 +33,6 @@ block variables
         description: 'Филе из цыплят с трюфелями в бульоне.'
       }
     ];
-
-mixin products(food)
-  fieldset
-    legend= food.description
-    label(for=food.type)
-      article
-        h2.heading= 'Нямушка '
-          span= food.ingredient
-        p= 'Сказочное заморское яство'
-        p= food.doseCount + ' порций'
-        case food.mouseCount
-          when 1
-            p= 'мышь в подарок'
-          when 2
-            p= '2 мыши в подарок'
-          when 5
-            p= '5 мышей в подарок'
-              br
-              .
-                заказчик доволен
-        p
-          span= 'Вес упаковки — '
-          span= food.packWeight
-          span= 'кг'
-    p= 'Чего сидишь? Порадуй котэ, '
-      label= 'купи.'
-        input.hidden(
-          type='checkbox'
-          name='type'
-          value=food.type
-          id=food.type
-        )
 
 block page
   +page()(class='page__layout')
