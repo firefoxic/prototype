@@ -37,11 +37,12 @@ block variables
 block page
   +page()(class='page__layout')
     +form()(class='form__layout')
-      +heading('h1')(class='hidden').
-        #{pageTitle}
-      +tagline().
-        Ты сегодня покормил кота?
+      +heading('h1')(class='hidden')
+        | #{pageTitle}
+      +tagline()
+        | Ты сегодня покормил кота?
       .products
         for food in foodList
           +products(food)
-      button.hidden(type='submit')= 'Оформить заказ'
+      button.hidden(type='submit')
+        | Оформить заказ

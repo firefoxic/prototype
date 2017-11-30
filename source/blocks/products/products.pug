@@ -1,30 +1,52 @@
-block variables
-
 mixin products(food)
   fieldset
-    legend= food.description
+    legend
+      | #{food.description}
     label(for=food.type)
       article
-        h2.heading= 'Нямушка '
-          span= food.ingredient
-        p= 'Сказочное заморское яство'
-        p= food.doseCount + ' порций'
-        case food.mouseCount
-          when 1
-            p= 'мышь в подарок'
-          when 2
-            p= '2 мыши в подарок'
-          when 5
-            p= '5 мышей в подарок'
-              br
-              .
-                заказчик доволен
+        +heading('h2')
+          | Нямушка
+          |
+          span
+            | #{food.ingredient}
         p
-          span= 'Вес упаковки — '
-          span= food.packWeight
-          span= 'кг'
-    p= 'Чего сидишь? Порадуй котэ, '
-      label= 'купи.'
+          | Сказочное заморское яство
+        p
+          b
+            | #{food.doseCount}
+          |
+          | порций
+        p.present
+          case food.mouseCount
+            when 1
+              | мышь в подарок
+            when 2
+              b
+                | 2
+              |
+              | мыши в подарок
+            when 5
+              b
+                | 5
+              |
+              | мышей в подарок
+              br
+              | заказчик доволен
+        p
+          span.hidden
+            | Вес упаковки —
+            |
+          span
+            | #{food.packWeight}
+          span
+            | кг
+    p
+      | Чего сидишь? Порадуй котэ,
+      |
+      label
+        b
+          | купи
+        | .
         input.hidden(
           type='checkbox'
           name='type'
