@@ -71,6 +71,7 @@ block page
         #{pageTitle}
       +tagline().
         Ты сегодня покормил кота?
-      for food in foodList
-        +products(food)
+      .products
+        for food in foodList
+          +products(food)
       button.button.hidden(type='submit')= 'Оформить заказ'
