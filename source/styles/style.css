@@ -14,6 +14,7 @@
 @import "../blocks/product/__item/_disabled/product__item_disabled.post.css";
 @import "../blocks/product/__card/product__card.post.css";
 @import "../blocks/product/__desc/product__desc.post.css";
+@import "../blocks/product/__heading/product__heading.post.css";
 @import "../blocks/product/__desc/_kind/product__desc_kind_promo.post.css";
 @import "../blocks/product/__desc/_kind/product__desc_kind_spec.post.css";
 @import "../blocks/product/__desc/_kind/product__desc_kind_sticker.post.css";
