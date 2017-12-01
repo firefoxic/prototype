@@ -6,4 +6,11 @@
 @import "../blocks/form/form.post.css";
 @import "../blocks/heading/__tagline/heading__tagline.post.css";
 @import "../blocks/product/product.post.css";
+@import "../blocks/product/__item/product__item.post.css";
+@import "../blocks/product/__card/product__card.post.css";
+@import "../blocks/product/__desc/product__desc.post.css";
+@import "../blocks/product/__desc/_kind/product__desc_kind_promo.post.css";
+@import "../blocks/product/__desc/_kind/product__desc_kind_spec.post.css";
+@import "../blocks/product/__desc/_kind/product__desc_kind_sticker.post.css";
+@import "../blocks/product/__desc/_kind/product__desc_kind_label.post.css";
 @import "../blocks/form/__layout/form__layout.post.css";

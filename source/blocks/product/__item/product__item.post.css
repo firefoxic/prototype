@@ -1,0 +1,17 @@
+.product__item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 0;
+  border: none;
+  margin: 0 auto;
+
+  @media (--tablet-up) {
+    margin: 0 calc(20vw - 120px);
+  }
+
+  @media (--desktop-up) {
+    margin: 0 40px;
+  }
+}

@@ -1,0 +1,16 @@
+.product__card {
+  box-sizing: border-box;
+  position: relative;
+  width: 320px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 44px;
+  border: 4px solid $common-default;
+  border-radius: 12px;
+  background-image: url(../../../assets/images/cat.png);
+  background-repeat: no-repeat;
+  background-position: left -28px bottom -92px;
+  background-color: $bg-color;
+  color: $main;
+}
