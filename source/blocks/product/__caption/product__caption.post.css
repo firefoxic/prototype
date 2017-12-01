@@ -1,4 +1,7 @@
 .product__caption {
+  box-sizing: border-box;
+  margin: 12px 0 26px;
   font-size: 13px;
+  line-height: 18px;
   text-align: center;
 }
