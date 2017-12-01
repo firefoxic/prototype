@@ -3,7 +3,7 @@ mixin products()
     each food in foodList
       - food.disabled = 'Печалька, ' + food.ingredient + ' закончился.'
       section.product__item(data-disabled=food.disabled)
-        +heading('h2')(class='heading_level_2 product__desc product__desc_kind_spec product__caption')
+        +heading('h2')(class='heading_level_2 product__desc product__desc_kind_spec product__caption hidden')
           | #{food.description}
         label(for=food.type)
           article.product__card
@@ -43,10 +43,10 @@ mixin products()
                 | #{food.packWeight}
               span.sticker__minor
                 | кг
-        p.product__desc.product__desc_kind_label.product__caption
+        p.product__desc.product__desc_kind_caption.product__caption
           | Чего сидишь? Порадуй котэ,
           |
-          label
+          label.product__desc_kind_label
             b
               | купи
             | .
