@@ -1,16 +1,31 @@
 .product__card {
   box-sizing: border-box;
   position: relative;
+  z-index: 1;
   width: 320px;
   height: 480px;
   display: flex;
   flex-direction: column;
-  padding: 10px 44px;
-  border: 4px solid $common-default;
+  padding: 14px 48px;
+  border: 0;
   border-radius: 12px;
-  background-image: url(../../../assets/images/cat.png);
-  background-repeat: no-repeat;
-  background-position: left -28px bottom -92px;
-  background-color: $bg-color;
   color: $main;
+}
+
+.product__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 480px;
+  z-index: -1;
+  border-radius: 12px;
+  background-image:
+    url("data:image/svg+xml,%3Csvg version='1.1' viewBox='0 0 320 480' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m43.85 2h264.15c5.54 0 10 4.46 10 10v456c0 5.54-4.46 10-10 10h-296c-5.54 0-10-4.46-10-10v-424.15z' fill='none' stroke='%231698d9' stroke-width='4'/%3E%3C/svg%3E%0A"),
+    url(../../../assets/images/cat.png),
+    url("data:image/svg+xml,%3Csvg version='1.1' viewBox='0 0 320 480' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m43.85 2h264.15c5.54 0 10 4.46 10 10v456c0 5.54-4.46 10-10 10h-296c-5.54 0-10-4.46-10-10v-424.15z' fill='%23f2f2f2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left 0 top 0, left -24px top 208px, left 0 top 0;
 }

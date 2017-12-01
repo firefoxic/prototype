@@ -1,5 +1,6 @@
 .product__heading {
   box-sizing: border-box;
+  z-index: 2;
   margin-bottom: 16px;
   line-height: 1.1;
 }
