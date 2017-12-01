@@ -22,21 +22,22 @@
 @custom-media --desktop-up (min-width: 1200px);
 @custom-media --retina (min-resolution: 1.5dppx), (min-resolution: 144dpi);
 
-$text-color-main: hsl(0, 0%, 0%);
-$text-color-invert: hsl(0, 0%, 100%);
-$text-color-disabled: hsl(0, 0%, 70%);
-$text-color-warning: hsl(60, 100%, 70%);
-$default: hsl(200, 82%, 47%);
-$default-hover: hsl(200, 79%, 54%);
-$selected: hsl(335, 82%, 47%);
-$selected-hover: hsl(335, 79%, 54%);
+$main: hsl(0, 0%, 0%);
+$invert: hsl(0, 0%, 100%);
+$bg-color: hsl(0, 0%, 95%);
+$disabled: hsl(0, 0%, 70%);
+$warning: hsl(60, 100%, 70%);
+$common-default: hsl(200, 82%, 47%);
+$common-hover: hsl(200, 79%, 54%);
+$marked-default: hsl(335, 82%, 47%);
+$marked-hover: hsl(335, 79%, 54%);
 
 :root {
-  font-size: 20px;
+  font-size: 16px;
   font-family: Trebuchet MS, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(0, 0%, 0%);
+  color: $invert;
+  background-color: $main;
 }
