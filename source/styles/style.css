@@ -4,7 +4,11 @@
 @import "../blocks/page/__layout/page__layout.post.css";
 @import "../blocks/hidden/hidden.post.css";
 @import "../blocks/form/form.post.css";
+@import "../blocks/heading/heading.post.css";
 @import "../blocks/heading/__tagline/heading__tagline.post.css";
+@import "../blocks/heading/_level/heading_level_2.post.css";
+@import "../blocks/heading/_level/heading_level_3.post.css";
+@import "../blocks/heading/_level/heading_level_4.post.css";
 @import "../blocks/product/product.post.css";
 @import "../blocks/product/__item/product__item.post.css";
 @import "../blocks/product/__card/product__card.post.css";

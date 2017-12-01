@@ -1,0 +1,7 @@
+.heading_level_2 {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
