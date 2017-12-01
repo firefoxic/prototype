@@ -2,6 +2,8 @@
   font-family: Exo2, Trebuchet MS, sans-serif;
   font-size: 36px;
   font-weight: 100;
-  color: hsl(0, 0%, 100%);
+  margin: 14px 0;
+  line-height: 1;
+  text-align: center;
   text-shadow: 0 1px 0 hsl(0, 0%, 0%);
 }
