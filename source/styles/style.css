@@ -17,6 +17,7 @@
 @import "../blocks/product/__desc/_kind/product__desc_kind_spec.post.css";
 @import "../blocks/product/__desc/_kind/product__desc_kind_sticker.post.css";
 @import "../blocks/product/__desc/_kind/product__desc_kind_label.post.css";
+@import "../blocks/product/__caption/product__caption.post.css";
 @import "../blocks/form/__layout/form__layout.post.css";
 @import "../blocks/sticker/sticker.post.css";
 @import "../blocks/sticker/__major/sticker__major.post.css";
