@@ -1,0 +1,57 @@
+mixin products()
+  .product&attributes(attributes)
+    each food in foodList
+      section.product__item
+        +heading('h2')(class='heading_level_2 product__desc product__desc_kind_spec')
+          | #{food.description}
+        label(for=food.type)
+          article.product__card
+            +heading('h3')(class='heading_level_3')
+              | Нямушка
+              |
+              span.heading_level_4
+                | #{food.ingredient}
+            p.product__desc.product__desc_kind_promo
+              | Сказочное заморское яство
+            p.product__desc
+              b
+                | #{food.doseCount}
+              |
+              | порций
+            p.product__desc
+              case food.mouseCount
+                when 1
+                  | мышь в подарок
+                when 2
+                  b
+                    | 2
+                  |
+                  | мыши в подарок
+                when 5
+                  b
+                    | 5
+                  |
+                  | мышей в подарок
+                  br
+                  | заказчик доволен
+            p.product__desc.product__desc_kind_sticker.sticker
+              span.hidden
+                | Вес упаковки —
+                |
+              span.sticker__major
+                | #{food.packWeight}
+              span.sticker__minor
+                | кг
+        p.product__desc.product__desc_kind_label
+          | Чего сидишь? Порадуй котэ,
+          |
+          label
+            b
+              | купи
+            | .
+            input.hidden(
+              type='checkbox'
+              name='type'
+              value=food.type
+              id=food.type
+            )

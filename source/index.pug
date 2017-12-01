@@ -3,7 +3,7 @@ include blocks/page/page.pug
 include blocks/heading/heading.pug
 include blocks/heading/__tagline/heading__tagline.pug
 include blocks/form/form.pug
-include blocks/products/products.pug
+include blocks/product/product.pug
 
 block variables
   - var pageTitle = 'Корм для котов'
@@ -35,14 +35,12 @@ block variables
     ];
 
 block page
-  +page()(class='page__layout')
-    +form()(class='form__layout')
+  +page()(class='root__page')
+    +form()(class='page__layout')
       +heading('h1')(class='hidden')
         | #{pageTitle}
       +tagline()
         | Ты сегодня покормил кота?
-      .products
-        for food in foodList
-          +products(food)
+      +products()(class='form__layout')
       button.hidden(type='submit')
         | Оформить заказ
