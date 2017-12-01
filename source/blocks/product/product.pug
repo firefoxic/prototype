@@ -1,7 +1,8 @@
 mixin products()
   .product&attributes(attributes)
     each food in foodList
-      section.product__item
+      - food.disabled = 'Печалька, ' + food.ingredient + ' закончился.'
+      section.product__item(data-disabled=food.disabled)
         +heading('h2')(class='heading_level_2 product__desc product__desc_kind_spec product__caption')
           | #{food.description}
         label(for=food.type)
