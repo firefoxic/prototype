@@ -4,5 +4,5 @@
 @import "../blocks/hidden/hidden.post.css";
 @import "../blocks/form/form.post.css";
 @import "../blocks/form/__layout/form__layout.post.css";
-@import "../blocks/products/products.post.css";
 @import "../blocks/heading/__tagline/heading__tagline.post.css";
+@import "../blocks/product/product.post.css";
