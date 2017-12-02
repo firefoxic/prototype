@@ -1,16 +1,12 @@
-.product__desc_kind_sticker {
+.label__sticker {
   position: absolute;
   top: 384px;
   left: 224px;
   width: 81px;
   height: 81px;
+  margin: 0;
   padding: 10px 0 0;
   text-align: center;
   line-height: 1;
-  color: $invert;
-  background-color: $common-default;
-
-  &:hover {
-    background-color: $common-hover;
-  }
+  background-color: currentColor;
 }

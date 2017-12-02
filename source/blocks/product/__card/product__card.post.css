@@ -9,9 +9,4 @@
   padding: 14px 48px;
   border: 0;
   border-radius: 12px;
-  color: $common-default;
-
-  &:hover {
-    color: $common-hover;
-  }
 }

@@ -5,7 +5,7 @@ mixin products()
       section.product__item(data-disabled=food.disabled)
         +heading('h2')(class='heading_level_2 product__desc product__desc_kind_spec product__caption hidden')
           | #{food.description}
-        label(for=food.type)
+        label.label.label__card(for=food.type)
           article.product__card
             svg.product__image(aria-hidden='true', width='320', height='480')
               use(xlink:href='assets/icons/icons.svg#card-outline')
@@ -14,14 +14,14 @@ mixin products()
               |
               span.heading_level_4
                 | #{food.ingredient}
-            p.product__desc.product__desc_kind_promo
+            p.product__desc.product__desc_kind_promo.product__desc_kind_text
               | Сказочное заморское яство
-            p.product__desc
+            p.product__desc.product__desc_kind_text
               b
                 | #{food.doseCount}
               |
               | порций
-            p.product__desc
+            p.product__desc.product__desc_kind_text
               case food.mouseCount
                 when 1
                   | мышь в подарок
@@ -37,7 +37,7 @@ mixin products()
                   | мышей в подарок
                   br
                   | заказчик доволен
-            p.product__desc.product__desc_kind_sticker.sticker
+            p.label__sticker.sticker
               span.hidden
                 | Вес упаковки —
                 |
@@ -48,7 +48,7 @@ mixin products()
         p.product__desc.product__desc_kind_caption.product__caption
           | Чего сидишь? Порадуй котэ,
           |
-          label.product__desc_kind_label
+          label.label.label__text
             b
               | купи
             | .
