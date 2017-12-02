@@ -1,3 +1,4 @@
 .label__text b {
   text-decoration: underline;
+  text-decoration-style: dashed;
 }
