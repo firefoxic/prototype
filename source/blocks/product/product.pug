@@ -48,7 +48,7 @@ mixin products()
         p.product__desc.product__desc_kind_caption.product__caption
           | Чего сидишь? Порадуй котэ,
           |
-          label.label.label__text(for=food.type)
+          label.label.label__text(for=food.type tabindex='0')
             b
               | купи
             | .
@@ -57,4 +57,5 @@ mixin products()
               name='type'
               value=food.type
               id=food.type
+              tabindex='-1'
             )
