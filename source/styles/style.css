@@ -10,6 +10,7 @@
 @import "../blocks/heading/_level/heading_level_3.post.css";
 @import "../blocks/heading/_level/heading_level_4.post.css";
 @import "../blocks/product/product.post.css";
+@import "../blocks/product/__image/product__image.post.css";
 @import "../blocks/product/__item/product__item.post.css";
 @import "../blocks/product/__item/_disabled/product__item_disabled.post.css";
 @import "../blocks/product/__card/product__card.post.css";

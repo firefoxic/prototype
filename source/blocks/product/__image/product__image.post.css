@@ -1,0 +1,9 @@
+.product__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 480px;
+  background-image: url(../../../assets/images/card-bg.png);
+  background-repeat: no-repeat;
+}
