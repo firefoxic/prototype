@@ -10,3 +10,11 @@
 .product__item_disabled .label {
   color: $disabled;
 }
+
+.product__item_checked .label {
+  color: $checked-default;
+
+  &:hover {
+    color: $checked-hover;
+  }
+}

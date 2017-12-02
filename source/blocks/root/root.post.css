@@ -24,13 +24,12 @@
 
 $main: hsl(0, 0%, 0%);
 $invert: hsl(0, 0%, 100%);
-$bg-color: hsl(0, 0%, 95%);
 $disabled: hsl(0, 0%, 70%);
 $warning: hsl(60, 100%, 70%);
 $common-default: hsl(200, 82%, 47%);
 $common-hover: hsl(200, 79%, 54%);
-$marked-default: hsl(335, 82%, 47%);
-$marked-hover: hsl(335, 79%, 54%);
+$checked-default: hsl(335, 82%, 47%);
+$checked-hover: hsl(335, 79%, 54%);
 
 :root {
   font-family: Trebuchet MS, Arial, sans-serif;
