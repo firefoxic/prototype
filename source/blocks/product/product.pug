@@ -7,7 +7,7 @@ mixin products()
           | #{food.description}
         label.label.label__card(for=food.type)
           article.product__card
-            svg.product__image(aria-hidden='true', width='320', height='480')
+            svg.product__image(aria-hidden='true', width='0', height='0' style='position: absolute')
               use(xlink:href='assets/icons/icons.svg#card-outline')
             +heading('h3')(class='heading_level_3 product__heading')
               | Нямушка
