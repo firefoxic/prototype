@@ -6,3 +6,7 @@
     color: $common-hover;
   }
 }
+
+.product__item_disabled .label {
+  color: $disabled;
+}
