@@ -10,3 +10,13 @@
   border: 0;
   border-radius: 12px;
 }
+
+.product__item_checked:hover .product__card::before {
+  content: attr(data-checked-hover);
+  display: block;
+  box-sizing: border-box;
+  z-index: 1;
+  margin: 7px 0;
+  font-size: 16px;
+  line-height: normal;
+}

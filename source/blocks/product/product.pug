@@ -6,7 +6,7 @@ mixin products()
         +heading('h2')(class='heading_level_2 product__desc product__desc_kind_spec product__caption hidden')
           | #{food.description}
         label.label.label__card(for=food.type)
-          article.product__card
+          article.product__card(data-checked-hover='Котэ не одобряет?')
             svg.product__image(aria-hidden='true', width='0', height='0' style='position: absolute')
               use(xlink:href='assets/icons/icons.svg#card-outline')
             +heading('h3')(class='heading_level_3 product__heading')
