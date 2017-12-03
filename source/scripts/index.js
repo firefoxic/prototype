@@ -35,6 +35,13 @@ productList.addEventListener('change', (event) => {
   productItem.classList.toggle('product__item_checked');
   productItem.querySelector('.product__desc_kind_spec').classList.toggle('hidden');
   productItem.querySelector('.product__desc_kind_caption').classList.toggle('hidden');
+
+  function handleMouseout(evt) {
+    productItem.classList.remove('product__item_mouseover');
+    productItem.removeEventListener(evt, handleMouseout);
+  }
+  productItem.classList.add('product__item_mouseover');
+  productItem.addEventListener('mouseout', handleMouseout);
 });
 
 checkboxList.forEach((element) => {

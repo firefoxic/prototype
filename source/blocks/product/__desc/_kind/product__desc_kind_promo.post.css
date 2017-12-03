@@ -7,6 +7,6 @@
   line-height: normal;
 }
 
-.product__item_checked:hover .product__desc_kind_promo {
+.product__item_checked:not(.product__item_mouseover):hover .product__desc_kind_promo {
   display: none;
 }

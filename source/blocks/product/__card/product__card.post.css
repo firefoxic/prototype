@@ -11,7 +11,7 @@
   border-radius: 12px;
 }
 
-.product__item_checked:hover .product__card::before {
+.product__item_checked:not(.product__item_mouseover):hover .product__card::before {
   content: attr(data-checked-hover);
   display: block;
   box-sizing: border-box;
@@ -19,4 +19,8 @@
   margin: 7px 0;
   font-size: 16px;
   line-height: normal;
+}
+
+.product__card {
+  pointer-events: none;
 }

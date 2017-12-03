@@ -1,10 +1,10 @@
 .label {
   box-sizing: border-box;
   color: $common-default;
+}
 
-  &:hover {
-    color: $common-hover;
-  }
+.label:hover {
+  color: $common-hover;
 }
 
 .product__item_disabled .label {
@@ -13,8 +13,8 @@
 
 .product__item_checked .label {
   color: $checked-default;
+}
 
-  &:hover {
-    color: $checked-hover;
-  }
+.product__item_checked:not(.product__item_mouseover):hover .label {
+  color: $checked-hover;
 }
