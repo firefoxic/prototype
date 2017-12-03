@@ -13,37 +13,35 @@ function getParent(className, child, source) {
   return parrent;
 }
 
-(function polyfillForEach() {
-  function getInternetExplorerVersion() {
-    let rv = -1;
-    const nua = navigator.userAgent;
-    const reM = new RegExp('MSIE ([0-9]{1,}[.0-9]{0,})');
-    const reT = new RegExp('Trident/.*rv:([0-9]{1,}[.0-9]{0,})');
-    if (navigator.appName === 'Microsoft Internet Explorer') {
-      if (reM.exec(nua) !== null) {
-        rv = parseFloat(RegExp.$1);
-      }
-    } else if (navigator.appName === 'Netscape') {
-      if (reT.exec(nua) !== null) {
-        rv = parseFloat(RegExp.$1);
-      }
+function getInternetExplorerVersion() {
+  let rv = -1;
+  const nua = navigator.userAgent;
+  const reM = new RegExp('MSIE ([0-9]{1,}[.0-9]{0,})');
+  const reT = new RegExp('Trident/.*rv:([0-9]{1,}[.0-9]{0,})');
+  if (navigator.appName === 'Microsoft Internet Explorer') {
+    if (reM.exec(nua) !== null) {
+      rv = parseFloat(RegExp.$1);
     }
-    return rv;
+  } else if (navigator.appName === 'Netscape') {
+    if (reT.exec(nua) !== null) {
+      rv = parseFloat(RegExp.$1);
+    }
   }
+  return rv;
+}
 
-  function isIE() {
-    return getInternetExplorerVersion() !== -1;
-  }
+function isIE() {
+  return getInternetExplorerVersion() !== -1;
+}
 
-  if (isIE()) {
-    NodeList.prototype.forEach = function createForEach(callback, thisArg) {
-      const thisArgument = thisArg || window;
-      for (let i = 0; i < this.length; i += 1) {
-        callback.call(thisArgument, this[i], i, this);
-      }
-    };
-  }
-}());
+if (isIE() || !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function createForEach(callback, thisArg) {
+    const thisArgument = thisArg || window;
+    for (let i = 0; i < this.length; i += 1) {
+      callback.call(thisArgument, this[i], i, this);
+    }
+  };
+}
 
 checkboxList.forEach((element) => {
   const elem = element;
