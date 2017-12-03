@@ -28,6 +28,13 @@ checkboxList.forEach((element) => {
   if (!Math.round(Math.random())) {
     elem.setAttribute('disabled', '');
   }
+  elem.addEventListener('focusin', () => {
+    const labelFocus = getParent('label__text', elem, productList);
+    labelFocus.classList.add('label__text_focused');
+    elem.addEventListener('focusout', () => {
+      labelFocus.classList.remove('label__text_focused');
+    });
+  });
 });
 
 productList.addEventListener('change', (event) => {

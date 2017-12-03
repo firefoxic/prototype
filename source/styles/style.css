@@ -27,6 +27,7 @@
 @import "../blocks/label/__card/label__card.post.css";
 @import "../blocks/label/__sticker/label__sticker.post.css";
 @import "../blocks/label/__text/label__text.post.css";
+@import "../blocks/label/__text/_focused/label__text_focused.post.css";
 @import "../blocks/sticker/sticker.post.css";
 @import "../blocks/sticker/__major/sticker__major.post.css";
 @import "../blocks/sticker/__minor/sticker__minor.post.css";
