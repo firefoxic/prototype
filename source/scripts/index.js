@@ -37,3 +37,11 @@ productList.addEventListener('change', (event) => {
   productItem.querySelector('.product__desc_kind_caption').classList.toggle('hidden');
 });
 
+checkboxList.forEach((element) => {
+  if (element.disabled) {
+    const productItem = getParent('product__item', element, productList);
+    productItem.classList.toggle('product__item_disabled');
+    productItem.querySelector('.product__desc_kind_spec').classList.add('hidden');
+    productItem.querySelector('.product__desc_kind_caption').classList.add('hidden');
+  }
+});
