@@ -1,5 +1,18 @@
 const checkboxList = productList.querySelectorAll('input[type=checkbox]');
 
+function getParent(className, child, source) {
+  let current = child;
+  if (!current.closest) {
+    while (current !== source) {
+      if (current.classList.contains(className)) {
+        return current;
+      }
+      current = current.parentNode;
+    }
+  }
+  return current.closest(`.${className}`);
+}
+
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = (callback, thisArg) => {
     const thisArgum = thisArg || window;
