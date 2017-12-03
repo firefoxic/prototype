@@ -1,3 +1,4 @@
+const productList = document.querySelector('.product');
 const checkboxList = productList.querySelectorAll('input[type=checkbox]');
 
 function getParent(className, child, source) {
@@ -27,5 +28,12 @@ checkboxList.forEach((element) => {
   if (!Math.round(Math.random())) {
     elem.setAttribute('disabled', '');
   }
+});
+
+productList.addEventListener('change', (event) => {
+  const productItem = getParent('product__item', event.target, productList);
+  productItem.classList.toggle('product__item_checked');
+  productItem.querySelector('.product__desc_kind_spec').classList.toggle('hidden');
+  productItem.querySelector('.product__desc_kind_caption').classList.toggle('hidden');
 });
 
