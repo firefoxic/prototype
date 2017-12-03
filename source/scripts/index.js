@@ -3,25 +3,47 @@ const checkboxList = productList.querySelectorAll('input[type=checkbox]');
 
 function getParent(className, child, source) {
   let current = child;
-  if (!current.closest) {
-    while (current !== source) {
-      if (current.classList.contains(className)) {
-        return current;
-      }
-      current = current.parentNode;
+  let parrent = source;
+  while (current !== source) {
+    if (current.classList.contains(className)) {
+      parrent = current;
     }
+    current = current.parentNode;
   }
-  return current.closest(`.${className}`);
+  return parrent;
 }
 
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = (callback, thisArg) => {
-    const thisArgum = thisArg || window;
-    for (let i = 0; i < this.length; i += 1) {
-      callback.call(thisArgum, this[i], i, this);
+(function polyfillForEach() {
+  function getInternetExplorerVersion() {
+    let rv = -1;
+    const nua = navigator.userAgent;
+    const reM = new RegExp('MSIE ([0-9]{1,}[.0-9]{0,})');
+    const reT = new RegExp('Trident/.*rv:([0-9]{1,}[.0-9]{0,})');
+    if (navigator.appName === 'Microsoft Internet Explorer') {
+      if (reM.exec(nua) !== null) {
+        rv = parseFloat(RegExp.$1);
+      }
+    } else if (navigator.appName === 'Netscape') {
+      if (reT.exec(nua) !== null) {
+        rv = parseFloat(RegExp.$1);
+      }
     }
-  };
-}
+    return rv;
+  }
+
+  function isIE() {
+    return getInternetExplorerVersion() !== -1;
+  }
+
+  if (isIE()) {
+    NodeList.prototype.forEach = function createForEach(callback, thisArg) {
+      const thisArgument = thisArg || window;
+      for (let i = 0; i < this.length; i += 1) {
+        callback.call(thisArgument, this[i], i, this);
+      }
+    };
+  }
+}());
 
 checkboxList.forEach((element) => {
   const elem = element;
