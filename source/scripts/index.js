@@ -48,7 +48,7 @@ productList.addEventListener('change', (event) => {
     productItem.removeEventListener(evt, handleMouseout);
   }
   productItem.classList.add('product__item_mouseover');
-  productItem.addEventListener('mouseout', handleMouseout);
+  productItem.addEventListener('mouseenter', handleMouseout);
 });
 
 checkboxList.forEach((element) => {
