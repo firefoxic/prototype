@@ -6,3 +6,7 @@
   line-height: 16px;
   font-weight: normal;
 }
+
+.product__item_disabled .product__desc {
+  color: #e2e2e2;
+}
