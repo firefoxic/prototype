@@ -1,6 +1,5 @@
 .product {
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
+  font-size: 0;
 }

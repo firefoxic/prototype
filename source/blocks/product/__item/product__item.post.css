@@ -8,10 +8,6 @@
   margin: 0 auto;
 
   @media (--tablet-up) {
-    margin: 0 calc(20vw - 120px);
-  }
-
-  @media (--desktop-up) {
     margin: 0 40px;
   }
 }
