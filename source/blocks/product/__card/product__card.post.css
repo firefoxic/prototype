@@ -9,6 +9,7 @@
   padding: 14px 48px;
   border: 0;
   border-radius: 12px;
+  pointer-events: none;
 }
 
 .product__item_checked:not(.product__item_mouseover):hover .product__card::before {
@@ -19,8 +20,4 @@
   margin: 7px 0;
   font-size: 16px;
   line-height: normal;
-}
-
-.product__card {
-  pointer-events: none;
 }
