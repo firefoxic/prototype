@@ -1,4 +1,5 @@
 const productList = document.querySelector('.product');
+const cardList = productList.querySelectorAll('.product__card');
 const checkboxList = productList.querySelectorAll('input[type=checkbox]');
 
 function getParent(className, child, source) {
@@ -43,6 +44,12 @@ if (isIE() || !NodeList.prototype.forEach) {
   };
 }
 
+function generateEvent(type, element) {
+  const newEvent = document.createEvent('Event');
+  newEvent.initEvent(type, true, true);
+  element.dispatchEvent(newEvent);
+}
+
 checkboxList.forEach((element) => {
   const elem = element;
   if (!Math.round(Math.random())) {
@@ -59,16 +66,17 @@ checkboxList.forEach((element) => {
 
 productList.addEventListener('change', (event) => {
   const productItem = getParent('product__item', event.target, productList);
-  productItem.classList.toggle('product__item_checked');
+  const productCard = productItem.querySelector('.product__card');
+  productCard.classList.toggle('product__card_checked');
   productItem.querySelector('.product__desc_kind_spec').classList.toggle('hidden');
   productItem.querySelector('.product__desc_kind_caption').classList.toggle('hidden');
 
   function handleMouseout(evt) {
-    productItem.classList.remove('product__item_mouseover');
-    productItem.removeEventListener(evt, handleMouseout);
+    productCard.classList.remove('product__card_mouseon');
+    productCard.removeEventListener(evt, handleMouseout);
   }
-  productItem.classList.add('product__item_mouseover');
-  productItem.addEventListener('mouseenter', handleMouseout);
+  productCard.classList.add('product__card_mouseon');
+  productCard.addEventListener('mouseenter', handleMouseout);
 });
 
 checkboxList.forEach((element) => {
@@ -77,5 +85,22 @@ checkboxList.forEach((element) => {
     productItem.classList.toggle('product__item_disabled');
     productItem.querySelector('.product__desc_kind_spec').classList.add('hidden');
     productItem.querySelector('.product__desc_kind_caption').classList.add('hidden');
+  }
+});
+
+cardList.forEach((element) => {
+  const productType = element.getAttribute('data-product-type');
+  const checkbox = productList.querySelector(`#${productType}`);
+  if (!checkbox.disabled) {
+    element.addEventListener('click', (event) => {
+      event.preventDefault();
+      checkbox.checked = !checkbox.checked;
+      generateEvent('change', element);
+      if (!checkbox.getAttribute('checked')) {
+        checkbox.setAttribute('checked', 'true');
+      } else {
+        checkbox.removeAttribute('checked');
+      }
+    });
   }
 });

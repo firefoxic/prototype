@@ -9,10 +9,26 @@
   padding: 14px 48px;
   border: 0;
   border-radius: 12px;
+  color: $common-default;
+}
+
+.product__card * {
   pointer-events: none;
 }
 
-.product__item_checked:not(.product__item_mouseover):hover .product__card::before {
+.product__card:hover {
+  color: $common-hover;
+}
+
+.product__card.product__card_checked {
+  color: $checked-default;
+}
+
+.product__card_checked:not(.product__card_mouseon):hover {
+  color: $checked-hover;
+}
+
+.product__card_checked:not(.product__card_mouseon):hover::before {
   content: attr(data-checked-hover);
   display: block;
   box-sizing: border-box;
@@ -20,4 +36,8 @@
   margin: 7px 0;
   font-size: 16px;
   line-height: normal;
+}
+
+.product__item_disabled .product__card {
+  color: $disabled;
 }

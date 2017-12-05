@@ -1,8 +1,0 @@
-.product__desc_kind_label {
-  box-sizing: border-box;
-  color: $common-default;
-}
-
-.product__desc_kind_label:hover {
-  color: $common-hover;
-}

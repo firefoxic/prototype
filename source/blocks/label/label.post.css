@@ -6,15 +6,3 @@
 .label:hover {
   color: $common-hover;
 }
-
-.product__item_disabled .label {
-  color: $disabled;
-}
-
-.product__item_checked .label {
-  color: $checked-default;
-}
-
-.product__item_checked:not(.product__item_mouseover):hover .label {
-  color: $checked-hover;
-}
