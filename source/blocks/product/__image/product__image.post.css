@@ -1,0 +1,14 @@
+.product__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 480px;
+  background-image: url(../../../assets/images/card-bg.png);
+  background-repeat: no-repeat;
+  fill: none;
+}
+
+.product__item_disabled .product__image {
+  fill: hsla(0, 0%, 100%, 0.5);
+}

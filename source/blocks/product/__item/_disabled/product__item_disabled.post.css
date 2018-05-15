@@ -1,0 +1,10 @@
+.product__item_disabled::after {
+  box-sizing: border-box;
+  content: attr(data-disabled);
+  margin: 12px 0;
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: $warning;
+}

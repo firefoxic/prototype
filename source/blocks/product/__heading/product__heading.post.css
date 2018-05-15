@@ -1,0 +1,10 @@
+.product__heading {
+  box-sizing: border-box;
+  z-index: 2;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.product__item_disabled .product__heading {
+  color: #e2e2e2;
+}

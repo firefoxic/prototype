@@ -1,0 +1,12 @@
+.product__desc {
+  box-sizing: border-box;
+  z-index: 2;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.product__item_disabled .product__desc {
+  color: #e2e2e2;
+}

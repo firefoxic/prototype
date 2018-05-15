@@ -1,0 +1,50 @@
+extends blocks/root/root.pug
+include blocks/page/page.pug
+include blocks/heading/heading.pug
+include blocks/heading/__tagline/heading__tagline.pug
+include blocks/form/form.pug
+include blocks/product/product.pug
+
+block variables
+  - var pageTitle = 'Корм для котов'
+  -
+    var foodList = [
+      {
+        type: 'foiegras',
+        ingredient: 'с фуа-гра',
+        doseCount: '10',
+        mouseCount: 1,
+        packWeight: '0,5',
+        description: 'Печень утки разварная с артишоками.'
+      },
+      {
+        type: 'fish',
+        ingredient: 'с рыбой',
+        doseCount: '40',
+        mouseCount: 2,
+        packWeight: '2',
+        description: 'Головы щучьи с чесноком да свежайшая сёмгушка.'
+      },{
+        type: 'chicken',
+        ingredient: 'с курой',
+        doseCount: '100',
+        mouseCount: 5,
+        packWeight: '5',
+        description: 'Филе из цыплят с трюфелями в бульоне.'
+      }
+    ];
+
+block page
+  +page()(class='root__page')
+    .hidden(style='display: none')
+      // inject:svg
+      // endinject
+    +form()(class='page__layout')
+      +heading('h1')(class='hidden')
+        | #{pageTitle}
+      +tagline()
+        | Ты сегодня покормил кота?
+      +products()
+      button.hidden(type='submit' tabindex='-1')
+        | Оформить заказ
+    script(src="scripts/main.js")

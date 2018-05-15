@@ -1,0 +1,12 @@
+.product__desc_kind_promo {
+  box-sizing: border-box;
+  display: block;
+  order: -1;
+  margin: 7px 0;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.product__card_checked:not(.product__card_mouseon):hover .product__desc_kind_promo {
+  display: none;
+}
