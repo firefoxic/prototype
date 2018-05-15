@@ -8,7 +8,7 @@ mixin products()
         label.label.label__card(for=food.type)
           article.product__card(data-checked-hover='Котэ не одобряет?')
             svg.product__image(aria-hidden='true', width='0', height='0' style='position: absolute')
-              use(xlink:href='assets/icons/icons.svg#card-outline')
+              use(xlink:href='#card-outline')
             +heading('h3')(class='heading_level_3 product__heading')
               | Нямушка
               |

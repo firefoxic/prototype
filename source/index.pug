@@ -36,6 +36,9 @@ block variables
 
 block page
   +page()(class='root__page')
+    .hidden(style='display: none')
+      // inject:svg
+      // endinject
     +form()(class='page__layout')
       +heading('h1')(class='hidden')
         | #{pageTitle}
