@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>Корм для котов</title>
+  </head>
+  <body class="page root__page">
+    <div class="hidden" style="display: none">
+      <!-- inject:svg-->
+      <svg xmlns="http://www.w3.org/2000/svg"><symbol id="card-outline" viewBox="0 0 320 480"><path d="M43.85 2H308c5.54 0 10 4.46 10 10v456c0 5.54-4.46 10-10 10H12c-5.54 0-10-4.46-10-10V43.85z" stroke="currentColor" stroke-width="4"/></symbol></svg>
+      <!-- endinject-->
+    </div>
+    <form class="form page__layout" action="/" method="post">
+      <h1 class="heading hidden">Корм для котов
+      </h1>
+      <p class="heading__tagline">Ты сегодня покормил кота?
+      </p>
+      <div class="product">
+        <div class="form__layout">
+          <section class="product__item" data-disabled="Печалька, с фуа-гра закончился.">
+            <h2 class="heading heading_level_2 product__desc product__desc_kind_spec product__caption hidden">Печень утки разварная с артишоками.
+            </h2>
+            <article class="product__card" data-checked-hover="Котэ не одобряет?" data-product-type="foiegras">
+              <svg class="product__image" aria-hidden="true" width="0" height="0" style="position: absolute">
+                <use xlink:href="#card-outline"></use>
+              </svg>
+              <h3 class="heading heading_level_3 product__heading">
+                Нямушка
+                <span class="heading_level_4">с фуа-гра</span>
+              </h3>
+              <p class="product__desc product__desc_kind_promo product__desc_kind_text">Сказочное заморское яство</p>
+              <p class="product__desc product__desc_kind_text"><b>10</b>
+                порций
+              </p>
+              <p class="product__desc product__desc_kind_text">мышь в подарок
+              </p>
+              <p class="label__sticker sticker"><span class="hidden">
+                  Вес упаковки —
+                  </span><span class="sticker__major">0,5</span><span class="sticker__minor">кг</span></p>
+            </article>
+            <p class="product__desc product__desc_kind_caption product__caption">
+              Чего сидишь? Порадуй котэ,
+              
+              <label class="label label__text" for="foiegras"><b>купи</b>.
+                <input class="hidden" type="checkbox" name="type" value="foiegras" id="foiegras"/>
+              </label>
+            </p>
+          </section>
+        </div>
+        <div class="form__layout">
+          <section class="product__item" data-disabled="Печалька, с рыбой закончился.">
+            <h2 class="heading heading_level_2 product__desc product__desc_kind_spec product__caption hidden">Головы щучьи с чесноком да свежайшая сёмгушка.
+            </h2>
+            <article class="product__card" data-checked-hover="Котэ не одобряет?" data-product-type="fish">
+              <svg class="product__image" aria-hidden="true" width="0" height="0" style="position: absolute">
+                <use xlink:href="#card-outline"></use>
+              </svg>
+              <h3 class="heading heading_level_3 product__heading">
+                Нямушка
+                <span class="heading_level_4">с рыбой</span>
+              </h3>
+              <p class="product__desc product__desc_kind_promo product__desc_kind_text">Сказочное заморское яство</p>
+              <p class="product__desc product__desc_kind_text"><b>40</b>
+                порций
+              </p>
+              <p class="product__desc product__desc_kind_text"><b>2</b>
+                мыши в подарок
+              </p>
+              <p class="label__sticker sticker"><span class="hidden">
+                  Вес упаковки —
+                  </span><span class="sticker__major">2</span><span class="sticker__minor">кг</span></p>
+            </article>
+            <p class="product__desc product__desc_kind_caption product__caption">
+              Чего сидишь? Порадуй котэ,
+              
+              <label class="label label__text" for="fish"><b>купи</b>.
+                <input class="hidden" type="checkbox" name="type" value="fish" id="fish"/>
+              </label>
+            </p>
+          </section>
+        </div>
+        <div class="form__layout">
+          <section class="product__item" data-disabled="Печалька, с курой закончился.">
+            <h2 class="heading heading_level_2 product__desc product__desc_kind_spec product__caption hidden">Филе из цыплят с трюфелями в бульоне.
+            </h2>
+            <article class="product__card" data-checked-hover="Котэ не одобряет?" data-product-type="chicken">
+              <svg class="product__image" aria-hidden="true" width="0" height="0" style="position: absolute">
+                <use xlink:href="#card-outline"></use>
+              </svg>
+              <h3 class="heading heading_level_3 product__heading">
+                Нямушка
+                <span class="heading_level_4">с курой</span>
+              </h3>
+              <p class="product__desc product__desc_kind_promo product__desc_kind_text">Сказочное заморское яство</p>
+              <p class="product__desc product__desc_kind_text"><b>100</b>
+                порций
+              </p>
+              <p class="product__desc product__desc_kind_text"><b>5</b>
+                мышей в подарок<br/>заказчик доволен
+              </p>
+              <p class="label__sticker sticker"><span class="hidden">
+                  Вес упаковки —
+                  </span><span class="sticker__major">5</span><span class="sticker__minor">кг</span></p>
+            </article>
+            <p class="product__desc product__desc_kind_caption product__caption">
+              Чего сидишь? Порадуй котэ,
+              
+              <label class="label label__text" for="chicken"><b>купи</b>.
+                <input class="hidden" type="checkbox" name="type" value="chicken" id="chicken"/>
+              </label>
+            </p>
+          </section>
+        </div>
+      </div>
+      <button class="hidden" type="submit" tabindex="-1">Оформить заказ</button>
+    </form>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
