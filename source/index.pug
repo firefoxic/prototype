@@ -2,6 +2,7 @@ extends blocks/root/root.pug
 include blocks/page/page.pug
 include blocks/heading/heading.pug
 include blocks/heading/__tagline/heading__tagline.pug
+include blocks/form/form.pug
 
 block variables
   - var pageTitle = 'Корм для котов'
@@ -66,7 +67,7 @@ mixin products(food)
 
 block page
   +page()(class='page__layout')
-    form.form(action='/', method='post')
+    +form()(class='form__layout')
       +heading('h1')(class='hidden').
         #{pageTitle}
       +tagline().
